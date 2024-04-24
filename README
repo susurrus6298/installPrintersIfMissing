@@ -1,0 +1,13 @@
+Use as an Intune remediation script, targeted to devices or users. 
+Execute the script in the user's context and in 64-bit PowerShell.
+
+detection.ps1 checks for the presence of the printers using FQDN
+--also checks for line-of-sight to the print server.
+If the printers are NOT found and the line-of-sight IS found, the
+remediation script executes.
+
+remediate.ps1 installs the printers by FQDN in the user context.
+
+Intended for running on demand on specific devices by the device
+page in Intune, or assigning the remediation script to execute 
+automatically on all devices according to a time schedule, either way.
